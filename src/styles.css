@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/4.6.0/dist/css/bootstrap.min.css";
+@import "assets/css/animation.css";
+@import "assets/css/custom.css";
+@import "assets/css/utilities.css";
+
+/* Custom Bootstrap */
+.form-control.is-invalid {
+	border-color: #dc3545;
+	background-image: url();
+}
+
+/* Custom Placeholder Loading */
+.ph-row div {
+	background-color: #e9ecef;
+	border-radius: 10px;
+}
+.ph-picture {
+	background-color: #e9ecef;
+}
+.ph-avatar {
+	background-color: #e9ecef;
+}

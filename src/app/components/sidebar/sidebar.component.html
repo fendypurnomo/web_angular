@@ -1,0 +1,345 @@
+<ul id="sidebar" class="nav flex-column flex-nowrap d-none d-md-flex sidebar-0"
+	[ngClass]="{'sidebar-toggled': sidebar.smallSidebar}">
+	<div class="profile d-flex flex-row align-items-center px-3">
+		<div class="profile-img">
+			<img class="rounded-circle mr-2" src="https://assets.local/assets/img/ci4-img/profiles/default.jpg" alt="img">
+		</div>
+		<div class="profile-info">
+			<div class="profile-info-name text-truncate font-sm">Fendy Purnomo</div>
+			<div class="profile-info-email text-truncate font-xs text-secondary">fendy.purnomo@yahoo.com</div>
+		</div>
+	</div>
+
+	<div class="border-bottom"></div>
+
+	<div class="sidebar-menu overflow-y-auto-custom">
+		<li class="nav-item sidebar-1">
+			<a class="nav-link px-3" routerLink="/dashboard/home" routerLinkActive="font-weight-bold">
+				<i class="fas fa-fw fa-home mr-2"></i>Beranda
+			</a>
+		</li>
+
+		<li class="nav-item sidebar-2">
+			<a class="nav-link collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse2" role="button"
+				aria-expanded="false" aria-controls="collapse2">
+				<i class="far fa-fw fa-folder mr-2"></i>HTML dan CSS
+			</a>
+			<div id="collapse2" class="nav-link-group collapse" data-parent=".sidebar-0">
+				<ul class="list-group list-group-flush">
+					<a class="list-group-item" routerLink="/dashboard/htmlCss/html" routerLinkActive="font-weight-bold">HTML</a>
+					<a class="list-group-item" routerLink="/dashboard/htmlCss/css" routerLinkActive="font-weight-bold">CSS</a>
+					<a class="list-group-item" routerLink="/dashboard/htmlCss/colors"
+						routerLinkActive="font-weight-bold">Colors</a>
+					<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse24"
+						role="button" aria-expanded="false" aria-controls="collapse24">Bootstrap</a>
+					<div id="collapse24" class="nav-link-group collapse" data-parent=".sidebar-2">
+						<ul class="list-group list-group-flush list-group-child sidebar-24">
+							<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse"
+								data-target="#collapse241" role="button" aria-expanded="false" aria-controls="collapse241">Layout</a>
+							<div id="collapse241" class="nav-link-group collapse" data-parent=".sidebar-24">
+								<ul class="list-group list-group-flush list-group-child sidebar-241">
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/layout/overview"
+										routerLinkActive="font-weight-bold">Overview</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/layout/grid"
+										routerLinkActive="font-weight-bold">Grid</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/layout/utilitiesForLayout"
+										routerLinkActive="font-weight-bold">Utilities for Layout</a>
+								</ul>
+							</div>
+							<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse"
+								data-target="#collapse242" role="button" aria-expanded="false" aria-controls="collapse242">Content</a>
+							<div id="collapse242" class="nav-link-group collapse" data-parent=".sidebar-24">
+								<ul class="list-group list-group-flush list-group-child sidebar-242">
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/reboot"
+										routerLinkActive="font-weight-bold">Reboot</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/typography"
+										routerLinkActive="font-weight-bold">Typography</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/code"
+										routerLinkActive="font-weight-bold">Code</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/images"
+										routerLinkActive="font-weight-bold">Images</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/tables"
+										routerLinkActive="font-weight-bold">Tables</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/content/figures"
+										routerLinkActive="font-weight-bold">Figures</a>
+								</ul>
+							</div>
+							<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse"
+								data-target="#collapse243" role="button" aria-expanded="false"
+								aria-controls="collapse243">Components</a>
+							<div id="collapse243" class="nav-link-group collapse" data-parent=".sidebar-24">
+								<ul class="list-group list-group-flush list-group-child sidebar-243">
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/alerts"
+										routerLinkActive="font-weight-bold">Alerts</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/badge"
+										routerLinkActive="font-weight-bold">Badge</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/breadcrumb"
+										routerLinkActive="font-weight-bold">Breadcrumb</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/buttons"
+										routerLinkActive="font-weight-bold">Buttons</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/buttonGroup"
+										routerLinkActive="font-weight-bold">Button Group</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/card"
+										routerLinkActive="font-weight-bold">Card</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/carousel"
+										routerLinkActive="font-weight-bold">Carousel</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/collapse"
+										routerLinkActive="font-weight-bold">Collapse</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/dropdowns"
+										routerLinkActive="font-weight-bold">Dropdowns</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/forms"
+										routerLinkActive="font-weight-bold">Forms</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/inputGroup"
+										routerLinkActive="font-weight-bold">Input Group</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/jumbotron"
+										routerLinkActive="font-weight-bold">Jumbotron</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/listGroup"
+										routerLinkActive="font-weight-bold">List Group</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/mediaObject"
+										routerLinkActive="font-weight-bold">Media Object</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/modal"
+										routerLinkActive="font-weight-bold">Modal</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/navs"
+										routerLinkActive="font-weight-bold">Navs</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/navbar"
+										routerLinkActive="font-weight-bold">Navbar</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/pagination"
+										routerLinkActive="font-weight-bold">Pagination</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/popovers"
+										routerLinkActive="font-weight-bold">Popovers</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/progress"
+										routerLinkActive="font-weight-bold">Progress</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/scrollspy"
+										routerLinkActive="font-weight-bold">Scrollspy</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/spinners"
+										routerLinkActive="font-weight-bold">Spinners</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/toasts"
+										routerLinkActive="font-weight-bold">Toasts</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/components/tooltips"
+										routerLinkActive="font-weight-bold">Tooltips</a>
+								</ul>
+							</div>
+							<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse"
+								data-target="#collapse244" role="button" aria-expanded="false" aria-controls="collapse244">Utilities</a>
+							<div id="collapse244" class="nav-link-group collapse" data-parent=".sidebar-24">
+								<ul class="list-group list-group-flush list-group-child sidebar-244">
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/borders"
+										routerLinkActive="font-weight-bold">Borders</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/clearfix"
+										routerLinkActive="font-weight-bold">Clearfix</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/closeIcon"
+										routerLinkActive="font-weight-bold">Close Icon</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/colors"
+										routerLinkActive="font-weight-bold">Colors</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/display"
+										routerLinkActive="font-weight-bold">Display</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/embed"
+										routerLinkActive="font-weight-bold">Embed</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/flex"
+										routerLinkActive="font-weight-bold">Flex</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/float"
+										routerLinkActive="font-weight-bold">Float</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/imageReplacement"
+										routerLinkActive="font-weight-bold">Image Replacement</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/overflow"
+										routerLinkActive="font-weight-bold">Overflow</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/position"
+										routerLinkActive="font-weight-bold">Position</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/screenReaders"
+										routerLinkActive="font-weight-bold">Screen Readers</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/shadows"
+										routerLinkActive="font-weight-bold">Shadows</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/sizing"
+										routerLinkActive="font-weight-bold">Sizing</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/spacing"
+										routerLinkActive="font-weight-bold">Spacing</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/stretchedLink"
+										routerLinkActive="font-weight-bold">Stretched Link</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/text"
+										routerLinkActive="font-weight-bold">Text</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/verticalAlign"
+										routerLinkActive="font-weight-bold">Vertical Align</a>
+									<a class="list-group-item" routerLink="/dashboard/htmlCss/bootstrap/utilities/visibility"
+										routerLinkActive="font-weight-bold">Visibility</a>
+								</ul>
+							</div>
+						</ul>
+					</div>
+					<a class="list-group-item collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse25"
+						role="button" aria-expanded="false" aria-controls="collapse25">Icons</a>
+					<div id="collapse25" class="nav-link-group collapse" data-parent=".sidebar-2">
+						<ul class="list-group list-group-flush list-group-child sidebar-25">
+							<a class="list-group-item" routerLink="/dashboard/htmlCss/icons/fontAwesome"
+								routerLinkActive="font-weight-bold">Font Awesome</a>
+							<a class="list-group-item" routerLink="/dashboard/htmlCss/icons/themify"
+								routerLinkActive="font-weight-bold">Themify</a>
+						</ul>
+					</div>
+					<a class="list-group-item" routerLink="/dashboard/htmlCss/graphics"
+						routerLinkActive="font-weight-bold">Graphics</a>
+				</ul>
+			</div>
+		</li>
+
+		<li class="nav-item sidebar-3">
+			<a class="nav-link collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse3" role="button"
+				aria-expanded="false" aria-controls="collapse3">
+				<i class="far fa-fw fa-folder mr-2"></i>JavaScript
+			</a>
+			<div id="collapse3" class="nav-link-group collapse" data-parent=".sidebar-0">
+				<ul class="list-group list-group-flush">
+					<a class="list-group-item" routerLink="/dashboard/javascript/javascript"
+						routerLinkActive="font-weight-bold">JavaScript</a>
+					<a class="list-group-item" routerLink="/dashboard/javascript/jquery"
+						routerLinkActive="font-weight-bold">jQuery</a>
+					<a class="list-group-item" routerLink="/dashboard/javascript/angularjs"
+						routerLinkActive="font-weight-bold">AngularJS</a>
+					<a class="list-group-item" routerLink="/dashboard/javascript/json"
+						routerLinkActive="font-weight-bold">JSON</a>
+					<a class="list-group-item" routerLink="/dashboard/javascript/ajax"
+						routerLinkActive="font-weight-bold">AJAX</a>
+				</ul>
+			</div>
+		</li>
+
+		<li class="nav-item sidebar-4">
+			<a class="nav-link collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse4" role="button"
+				aria-expanded="false" aria-controls="collapse4">
+				<i class="far fa-fw fa-folder mr-2"></i>Server Side
+			</a>
+			<div id="collapse4" class="nav-link-group collapse" data-parent=".sidebar-0">
+				<ul class="list-group list-group-flush">
+					<a class="list-group-item" routerLink="/dashboard/serverSide/sql" routerLinkActive="font-weight-bold">SQL</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/php" routerLinkActive="font-weight-bold">PHP</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/python"
+						routerLinkActive="font-weight-bold">Python</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/java"
+						routerLinkActive="font-weight-bold">Java</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/asp" routerLinkActive="font-weight-bold">ASP</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/nodejs"
+						routerLinkActive="font-weight-bold">Node.js</a>
+					<a class="list-group-item" routerLink="/dashboard/serverSide/raspberrypi"
+						routerLinkActive="font-weight-bold">Raspberry Pi</a>
+				</ul>
+			</div>
+		</li>
+
+		<li class="nav-item sidebar-5">
+			<a class="nav-link collapsed right-arrow" href="#" data-toggle="collapse" data-target="#collapse5" role="button"
+				aria-expanded="false" aria-controls="collapse5">
+				<i class="far fa-fw fa-folder mr-2"></i>XML
+			</a>
+			<div id="collapse5" class="nav-link-group collapse" data-parent=".sidebar-0">
+				<ul class="list-group list-group-flush">
+					<a class="list-group-item" routerLink="/dashboard/xml/xml" routerLinkActive="font-weight-bold">XML</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xmlAjax" routerLinkActive="font-weight-bold">XML
+						Ajax</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xmlDom" routerLinkActive="font-weight-bold">XML DOM</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xmlDtd" routerLinkActive="font-weight-bold">XML DTD</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xmlSchema" routerLinkActive="font-weight-bold">XML
+						Schema</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xSlt" routerLinkActive="font-weight-bold">XSLT</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xPath" routerLinkActive="font-weight-bold">XPath</a>
+					<a class="list-group-item" routerLink="/dashboard/xml/xQuery" routerLinkActive="font-weight-bold">XQuery</a>
+				</ul>
+			</div>
+		</li>
+
+		<li class="nav-item sidebar-6">
+			<a class="nav-link px-3" routerLink="/dashboard/settings" routerLinkActive="font-weight-bold">
+				<i class="fas fa-fw fa-cog mr-2"></i>Pengaturan
+			</a>
+		</li>
+
+		<li class="nav-item sidebar-7">
+			<a class="nav-link px-3" routerLink="/signout" (click)="signout.signout()">
+				<i class="fas fa-fw fa-sign-out-alt mr-2"></i>Keluar
+			</a>
+		</li>
+
+		<li class="nav-item sidebar-21"></li>
+		<li class="nav-item sidebar-22"></li>
+		<li class="nav-item sidebar-23"></li>
+		<li class="nav-item sidebar-24"></li>
+		<li class="nav-item sidebar-25"></li>
+		<li class="nav-item sidebar-26"></li>
+		<li class="nav-item sidebar-31"></li>
+		<li class="nav-item sidebar-32"></li>
+		<li class="nav-item sidebar-33"></li>
+		<li class="nav-item sidebar-34"></li>
+		<li class="nav-item sidebar-35"></li>
+		<li class="nav-item sidebar-41"></li>
+		<li class="nav-item sidebar-42"></li>
+		<li class="nav-item sidebar-43"></li>
+		<li class="nav-item sidebar-44"></li>
+		<li class="nav-item sidebar-45"></li>
+		<li class="nav-item sidebar-46"></li>
+		<li class="nav-item sidebar-47"></li>
+		<li class="nav-item sidebar-51"></li>
+		<li class="nav-item sidebar-52"></li>
+		<li class="nav-item sidebar-53"></li>
+		<li class="nav-item sidebar-54"></li>
+		<li class="nav-item sidebar-55"></li>
+		<li class="nav-item sidebar-56"></li>
+		<li class="nav-item sidebar-57"></li>
+		<li class="nav-item sidebar-58"></li>
+		<li class="nav-item sidebar-241"></li>
+		<li class="nav-item sidebar-242"></li>
+		<li class="nav-item sidebar-243"></li>
+		<li class="nav-item sidebar-244"></li>
+		<li class="nav-item sidebar-251"></li>
+		<li class="nav-item sidebar-252"></li>
+		<li class="nav-item sidebar-24101"></li>
+		<li class="nav-item sidebar-24102"></li>
+		<li class="nav-item sidebar-24103"></li>
+		<li class="nav-item sidebar-24201"></li>
+		<li class="nav-item sidebar-24202"></li>
+		<li class="nav-item sidebar-24203"></li>
+		<li class="nav-item sidebar-24204"></li>
+		<li class="nav-item sidebar-24205"></li>
+		<li class="nav-item sidebar-24206"></li>
+		<li class="nav-item sidebar-24301"></li>
+		<li class="nav-item sidebar-24302"></li>
+		<li class="nav-item sidebar-24303"></li>
+		<li class="nav-item sidebar-24304"></li>
+		<li class="nav-item sidebar-24305"></li>
+		<li class="nav-item sidebar-24306"></li>
+		<li class="nav-item sidebar-24307"></li>
+		<li class="nav-item sidebar-24308"></li>
+		<li class="nav-item sidebar-24309"></li>
+		<li class="nav-item sidebar-24310"></li>
+		<li class="nav-item sidebar-24311"></li>
+		<li class="nav-item sidebar-24312"></li>
+		<li class="nav-item sidebar-24313"></li>
+		<li class="nav-item sidebar-24314"></li>
+		<li class="nav-item sidebar-24315"></li>
+		<li class="nav-item sidebar-24316"></li>
+		<li class="nav-item sidebar-24317"></li>
+		<li class="nav-item sidebar-24318"></li>
+		<li class="nav-item sidebar-24319"></li>
+		<li class="nav-item sidebar-24320"></li>
+		<li class="nav-item sidebar-24321"></li>
+		<li class="nav-item sidebar-24322"></li>
+		<li class="nav-item sidebar-24323"></li>
+		<li class="nav-item sidebar-24324"></li>
+		<li class="nav-item sidebar-24401"></li>
+		<li class="nav-item sidebar-24402"></li>
+		<li class="nav-item sidebar-24403"></li>
+		<li class="nav-item sidebar-24404"></li>
+		<li class="nav-item sidebar-24405"></li>
+		<li class="nav-item sidebar-24406"></li>
+		<li class="nav-item sidebar-24407"></li>
+		<li class="nav-item sidebar-24408"></li>
+		<li class="nav-item sidebar-24409"></li>
+		<li class="nav-item sidebar-24410"></li>
+		<li class="nav-item sidebar-24411"></li>
+		<li class="nav-item sidebar-24412"></li>
+		<li class="nav-item sidebar-24413"></li>
+		<li class="nav-item sidebar-24414"></li>
+		<li class="nav-item sidebar-24415"></li>
+		<li class="nav-item sidebar-24416"></li>
+		<li class="nav-item sidebar-24417"></li>
+		<li class="nav-item sidebar-24418"></li>
+		<li class="nav-item sidebar-24419"></li>
+	</div>
+</ul>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+.submit-form {
+	max-width: 400px;
+	margin: auto;
+}
+.edit-form {
+	max-width: 400px;
+	margin: auto;
+}
+.list {
+	text-align: left;
+	max-width: 750px;
+	margin: auto;
+}

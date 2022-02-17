@@ -1,0 +1,14 @@
+<div class="container">
+	<h3>Angular 8 Show Image Preview Before Uploading</h3>
+	<form id="form" name="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+		<!-- Select File -->
+		<input type="file" accept="image/*" (change)="showPreview($event)" />
+		<!-- Image Preview -->
+		<div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+			<img [src]="imageURL" [alt]="form.value.name">
+		</div>
+		<!-- Assign Image Alt -->
+		<input placeholder="Enter name" formControlName="name">
+		<button type="submit">Submit</button>
+	</form>
+</div>

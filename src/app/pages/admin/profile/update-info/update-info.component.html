@@ -1,0 +1,116 @@
+<h5 class="mb-1" *ngIf="!loading.placeholderLoading">Profil</h5>
+
+<breadcrumbs></breadcrumbs>
+
+<div class="row" *ngIf="!loading.placeholderLoading">
+	<div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+		<div class="card">
+			<div class="card-body">
+				<h4>Perbaharui Informasi Akun</h4>
+				<hr>
+				<form id="userProfileForm" class="" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()"
+					AutofocusInvalid>
+					<div class="form-row mx-0">
+						<div class="form-group col-md-12 px-0">
+							<label for="username">Nama Pengguna</label>
+							<input id="username" class="form-control form-control-sm" type="text" autocomplete="off"
+								placeholder="Nama Pengguna" formControlName="username"
+								[ngClass]="{'is-invalid': submitted && f.username.errors}" Autofocus>
+							<div class="invalid-feedback" *ngIf="submitted && f.username.errors">
+								<div *ngIf="f.username.errors.required">Masukkan nama pengguna Anda!</div>
+								<div *ngIf="f.username.errors.minlength">Masukkan nama pengguna minimal 5 karakter!</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row mx-0">
+						<div class="form-group col-md-6 px-0 pr-md-2">
+							<label for="firstname">Nama Depan</label>
+							<input id="firstname" class="form-control form-control-sm" type="text" autocomplete="off"
+								placeholder="Nama Depan" formControlName="firstname"
+								[ngClass]="{'is-invalid': submitted && f.firstname.errors}">
+							<div class="invalid-feedback" *ngIf="submitted && f.firstname.errors">
+								<div *ngIf="f.firstname.errors.required">Masukkan nama depan Anda!</div>
+								<div *ngIf="f.firstname.errors.minlength">Masukkan nama depan Anda minimal 2 karakter!</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6 px-0 pl-md-2">
+							<label for="lastname">Nama Belakang</label>
+							<input id="lastname" class="form-control form-control-sm" type="text" autocomplete="off"
+								placeholder="Nama Belakang" formControlName="lastname"
+								[ngClass]="{'is-invalid': submitted && f.lastname.errors}">
+							<div class="invalid-feedback" *ngIf="submitted && f.lastname.errors">
+								<div *ngIf="f.lastname.errors.required">Masukkan nama belakang Anda!</div>
+								<div *ngIf="f.lastname.errors.minlength">Masukkan nama belakang Anda minimal 2 karakter!</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row mx-0">
+						<label for="genderMan">Jenis Kelamin</label>
+						<div class="form-group col-md-12 px-0">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="genderMan" class="custom-control-input" type="radio" value="1" formControlName="gender"
+									[ngClass]="{'is-invalid': submitted && f.gender.errors}">
+								<label class="custom-control-label" for="genderMan">Laki-laki</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="genderWoman" class="custom-control-input" type="radio" value="2" formControlName="gender"
+									[ngClass]="{'is-invalid': submitted && f.gender.errors}">
+								<label class="custom-control-label" for="genderWoman">Perempuan</label>
+							</div>
+							<div class="invalid-feedback" [ngClass]="{'d-block': submitted && f.gender.errors}">Pilih jenis kelamin
+								Anda!</div>
+						</div>
+					</div>
+					<hr>
+					<div class="float-right">
+						<button class="btn btn-sm btn-outline-secondary btn-w85 mr-1" type="button"
+							onclick="window.history.back()">Batal</button>
+						<button class="btn btn-sm btn-outline-primary btn-w85" type="submit">
+							<span class="spinner spinner-border spinner-border-sm" *ngIf="btnLoading"></span>
+							<span *ngIf="!btnLoading">Perbaharui</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div *ngIf="loading.placeholderLoading">
+	<div class="ph-item border-0 p-0 mb-2">
+		<div class="ph-col-12 p-0">
+			<div class="ph-row">
+				<div class="ph-col-2 big"></div>
+				<div class="ph-col-10 big empty"></div>
+				<div class="ph-col-8"></div>
+				<div class="ph-col-4 empty"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+			<div class="ph-item">
+				<div class="ph-col-12">
+					<div class="ph-row">
+						<div class="ph-col-12 big"></div>
+						<div class="ph-col-12 big empty"></div>
+						<div class="ph-col-4 big"></div>
+						<div class="ph-col-8 empty"></div>
+						<div class="ph-col-12"></div>
+						<div class="ph-col-12 empty"></div>
+						<div class="ph-col-4 big"></div>
+						<div class="ph-col-8 empty"></div>
+						<div class="ph-col-12"></div>
+						<div class="ph-col-12 empty"></div>
+						<div class="ph-col-4 big"></div>
+						<div class="ph-col-8 empty"></div>
+						<div class="ph-col-12"></div>
+						<div class="ph-col-12 big empty"></div>
+						<div class="ph-col-8 empty"></div>
+						<div class="ph-col-4 big"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

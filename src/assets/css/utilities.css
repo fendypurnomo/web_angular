@@ -1,0 +1,275 @@
+/* Background Gradient */
+.bg-gradient-primary {
+	background: #007bff linear-gradient(180deg, #268fff, #007bff) repeat-x !important;
+}
+.bg-gradient-secondary {
+	background: #6c757d linear-gradient(180deg, #828a91, #6c757d) repeat-x !important;
+}
+.bg-gradient-success {
+	background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+}
+.bg-gradient-info {
+	background: #17a2b8 linear-gradient(180deg, #3ab0c3, #17a2b8) repeat-x !important;
+}
+.bg-gradient-warning {
+	background: #ffc107 linear-gradient(180deg, #ffca2c, #ffc107) repeat-x !important;
+}
+.bg-gradient-danger {
+	background: #dc3545 linear-gradient(180deg, #e15361, #dc3545) repeat-x !important;
+}
+.bg-gradient-light {
+	background: #f8f9fa linear-gradient(180deg, #f9fafb, #f8f9fa) repeat-x !important;
+}
+.bg-gradient-dark {
+	background: #343a40 linear-gradient(180deg, #52585d, #343a40) repeat-x !important;
+}
+
+/* Box Shadow */
+.box-shadow-none {
+	box-shadow: none !important;
+}
+
+/* Button */
+.btn-w85 {
+	width: 85px;
+	padding: 0.3rem 0.5rem;
+}
+
+/* Font Size */
+.font-xs {
+	font-size: 0.75rem !important;
+}
+.font-sm {
+	font-size: 0.825rem !important;
+}
+
+/* Font Weight */
+.font-weight-100 {
+	font-weight: 100;
+}
+.font-weight-200 {
+	font-weight: 200;
+}
+.font-weight-300 {
+	font-weight: 300;
+}
+.font-weight-400 {
+	font-weight: 400;
+}
+.font-weight-500 {
+	font-weight: 500;
+}
+.font-weight-600 {
+	font-weight: 600;
+}
+.font-weight-700 {
+	font-weight: 700;
+}
+.font-weight-800 {
+	font-weight: 800;
+}
+.font-weight-900 {
+	font-weight: 900;
+}
+
+/* Hover */
+.hover-100:hover {
+	background-color: #f8f9fa !important;
+}
+.hover-200:hover {
+	background-color: #e9ecef !important;
+}
+.hover-300:hover {
+	background-color: #dee2e6 !important;
+}
+.hover-400:hover {
+	background-color: #ced4da !important;
+}
+.hover-500:hover {
+	background-color: #adb5bd !important;
+}
+.hover-600:hover {
+	background-color: #6c757d !important;
+}
+.hover-700:hover {
+	background-color: #495057 !important;
+}
+.hover-800:hover {
+	background-color: #343a40 !important;
+}
+.hover-900:hover {
+	background-color: #212529 !important;
+}
+
+/* Outline */
+.outline-0:focus,
+.outline-0:active,
+.outline-0:active:focus {
+	outline: 0 !important;
+}
+
+/* Overflow */
+.overflow-x-auto-custom {
+	overflow-x: auto;
+}
+.overflow-y-auto-custom {
+	overflow-y: auto;
+}
+.overflow-x-hidden {
+	overflow-x: hidden;
+}
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
+html,
+body,
+.overflow-auto-custom,
+.overflow-x-auto-custom,
+.overflow-y-auto-custom,
+.modal-dialog-scrollable .modal-body,
+#sidebar.sidebar-toggled .list-group {
+	scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+	scrollbar-width: thin;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.overflow-auto-custom::-webkit-scrollbar,
+.overflow-y-auto-custom::-webkit-scrollbar,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar,
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar {
+	width: 7px;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.overflow-auto-custom::-webkit-scrollbar,
+.overflow-x-auto-custom::-webkit-scrollbar {
+	height: 7px;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.overflow-auto-custom::-webkit-scrollbar-track,
+.overflow-x-auto-custom::-webkit-scrollbar-track,
+.overflow-y-auto-custom::-webkit-scrollbar-track,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track,
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.overflow-auto-custom::-webkit-scrollbar-thumb,
+.overflow-x-auto-custom::-webkit-scrollbar-thumb,
+.overflow-y-auto-custom::-webkit-scrollbar-thumb,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb,
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+.overflow-auto-custom::-webkit-scrollbar-thumb:hover,
+.overflow-x-auto-custom::-webkit-scrollbar-thumb:hover,
+.overflow-y-auto-custom::-webkit-scrollbar-thumb:hover,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:hover,
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+html::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:active,
+.overflow-auto-custom::-webkit-scrollbar-thumb:active,
+.overflow-x-auto-custom::-webkit-scrollbar-thumb:active,
+.overflow-y-auto-custom::-webkit-scrollbar-thumb:active,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:active,
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb:active {
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Right Arrow */
+.right-arrow::after {
+	color: #adb5bd !important;
+	width: 1rem;
+	border: 0;
+	text-align: center;
+	vertical-align: 0;
+	font-weight: 900;
+	float: right;
+	content: "\f107";
+	font-family: "Font Awesome 5 Free";
+	transition: transform 0.15s ease;
+}
+.right-arrow.collapsed::after {
+	transform: rotate(-90deg);
+}
+
+/* Rounded */
+.rounded-pill-left {
+	border-radius: 50rem 0 0 50rem !important;
+}
+.rounded-pill-right {
+	border-radius: 0 50rem 50rem 0 !important;
+}
+
+/* Text Gray */
+.text-gray-100 {
+	color: #f8f9fa !important;
+}
+.text-gray-200 {
+	color: #e9ecef !important;
+}
+.text-gray-300 {
+	color: #dee2e6 !important;
+}
+.text-gray-400 {
+	color: #ced4da !important;
+}
+.text-gray-500 {
+	color: #adb5bd !important;
+}
+.text-gray-600 {
+	color: #6c757d !important;
+}
+.text-gray-700 {
+	color: #495057 !important;
+}
+.text-gray-800 {
+	color: #343a40 !important;
+}
+.text-gray-900 {
+	color: #212529 !important;
+}
+
+/* Vertical Height */
+.vh-50 {
+	height: calc(100vh - 25vh) !important;
+}
+.vh-60 {
+	height: calc(100vh - 20vh) !important;
+}
+.vh-70 {
+	height: calc(100vh - 15vh) !important;
+}
+.vh-80 {
+	height: calc(100vh - 10vh) !important;
+}
+.vh-90 {
+	height: calc(100vh - 5vh) !important;
+}
+
+/* Z-Index */
+.z-index-0 {
+	z-index: 0 !important;
+}
+.z-index-1 {
+	z-index: 1 !important;
+}
+.z-index-2 {
+	z-index: 2 !important;
+}
+.z-index-3 {
+	z-index: 3 !important;
+}
+.z-index-4 {
+	z-index: 4 !important;
+}
+.z-index-5 {
+	z-index: 5 !important;
+}

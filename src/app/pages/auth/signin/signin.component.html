@@ -1,0 +1,39 @@
+<div class="signin border rounded-lg p-4 mx-auto my-4">
+	<h1 class="text-center mb-4">Masuk</h1>
+	<form id="signinForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
+		<div class="form-group form-floating">
+			<input id="username" class="form-control" type="text" autocomplete="off" placeholder="Email atau Nama Pengguna"
+				formControlName="username" [ngClass]="{'is-invalid': submitted && f.username.errors}" Autofocus>
+			<label for="username">Email atau Nama Pengguna</label>
+			<div class="invalid-feedback" *ngIf="submitted && f.username.errors">
+				<span *ngIf="f.username.errors.required">Masukkan email atau nama pengguna Anda!</span>
+				<span *ngIf="f.username.errors.userNotFound">Akun Anda tidak dapat kami temukan, periksa kembali email atau nama
+					pengguna Anda!</span>
+				<span *ngIf="f.username.errors.accountUnactivated">Maaf, Anda belum melakukan aktivasi akun!</span>
+				<span *ngIf="f.username.errors.userBlocked">Maaf, akun Anda diblokir!</span>
+			</div>
+		</div>
+		<div class="form-group form-floating mb-4">
+			<input id="password" class="form-control" type="{{inputType}}" autocomplete="off" placeholder="Kata Sandi"
+				formControlName="password" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+			<label for="password">Kata Sandi</label>
+			<span id="eye" class="hover-200" (click)="showHide()">
+				<i class="far fa-fw {{showHideClass}}"></i>
+			</span>
+			<div class="invalid-feedback" *ngIf="submitted && f.password.errors"
+				[ngClass]="{'d-block': submitted && f.password.errors}">
+				<span *ngIf="f.password.errors.required">Masukkan kata sandi Anda!</span>
+				<span *ngIf="f.password.errors.invalidPassword">Kata sandi yang Anda masukkan salah!</span>
+			</div>
+		</div>
+		<div class="form-group text-right mb-4">
+			<a routerLink="/recoveryAccount">Lupa sandi?</a>
+		</div>
+		<button class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center align-items-center"
+			type="submit" name="auth">
+			<span class="spinner-border spinner-border" *ngIf="btnLoading"></span>
+			<span *ngIf="!btnLoading">Masuk</span>
+		</button>
+	</form>
+	<p class="text-center mt-4 mb-0">Belum punya akun? <a routerLink="/signup">Daftar</a></p>
+</div>

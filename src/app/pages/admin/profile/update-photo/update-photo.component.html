@@ -1,0 +1,54 @@
+<h5 class="mb-1" *ngIf="!loading.placeholderLoading">Profil</h5>
+
+<breadcrumbs></breadcrumbs>
+
+<div class="row" *ngIf="!loading.placeholderLoading">
+	<div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+		<form id="userImageForm" class="" accept-charset="utf-8" novalidate enctype="multipart/form-data" [formGroup]="form"
+			(ngSubmit)="onSubmit()">
+			<input class="d-none" type="file" accept="image/*" formControlName="file" (change)="showPreview($event)"
+				#chooseFile>
+			<div class="container-photo-profile position-relative w-75 mx-auto">
+				<img class="img-thumbnail d-block w-100" [src]="imageURL" [alt]="form.value.name">
+				<div class="choose-img position-absolute text-center text-white p-4 m-1" (click)="chooseFile.click()">Pilih Foto
+				</div>
+			</div>
+			<div class="text-center mt-2" *ngIf="imageURL && imageURL !==''">
+				<button class="btn btn-sm btn-outline-secondary btn-w85 mr-1" type="button" name="btnCancel"
+					onclick="window.history.back()">Batal</button>
+				<button class="btn btn-sm btn-outline-primary btn-w85" type="submit" name="btnUploadImage">
+					<span class="spinner spinner-border spinner-border-sm" *ngIf="btnLoading"></span>
+					<span *ngIf="!btnLoading">Unggah</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div *ngIf="loading.placeholderLoading">
+	<div class="ph-item border-0 p-0 mb-2">
+		<div class="ph-col-12 p-0">
+			<div class="ph-row">
+				<div class="ph-col-2 big"></div>
+				<div class="ph-col-10 big empty"></div>
+				<div class="ph-col-8"></div>
+				<div class="ph-col-4 empty"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+			<div class="ph-item">
+				<div class="ph-col-12">
+					<div class="ph-picture"></div>
+					<div class="ph-row">
+						<div class="ph-col-12 big empty"></div>
+						<div class="ph-col-4 big"></div>
+						<div class="ph-col-4 empty"></div>
+						<div class="ph-col-4 big"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

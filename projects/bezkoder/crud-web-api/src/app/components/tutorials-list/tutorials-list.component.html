@@ -1,0 +1,63 @@
+<div class="list row">
+	<div class="col-md-12">
+		<div class="input-group mb-3">
+			<input class="form-control" type="text" placeholder="Search by title" [(ngModel)]="title">
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button" (click)="searchTitle()">Search</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="row">
+			<div class="col-6">
+				<pagination-controls previousLabel="Prev" nextLabel="Next" [responsive]="true"
+					(pageChange)="handlePageChange($event)"></pagination-controls>
+			</div>
+			<div class="col-6">
+				Items per Page:
+				<select (change)="handlePageSizeChange($event)">
+					<option *ngFor="let size of pageSizes" [ngValue]="size">
+						{{size}}
+					</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 mb-2">
+		<button class="btn btn-sm btn-danger mr-2" (click)="removeAllTutorials()">Remove All</button>
+		<button class="btn btn-sm btn-primary" (click)="refreshList()">Refresh List</button>
+	</div>
+
+	<div class="col-md-6">
+		<h4>Tutorials List</h4>
+		<ul class="list-group">
+			<li class="list-group-item"
+				*ngFor="let tutorial of tutorials | paginate : { itemsPerPage: pageSize, currentPage: page, totalItems: count }; let i = index"
+				[class.active]="i == currentIndex" (click)="setActiveTutorial(tutorial, i)">
+				{{tutorial.title}}
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-6">
+		<div *ngIf="currentTutorial">
+			<h4>Tutorial</h4>
+			<div>
+				<label><strong>Title:</strong></label> {{currentTutorial.title}}
+			</div>
+			<div>
+				<label><strong>Description:</strong></label> {{currentTutorial.description}}
+			</div>
+			<div>
+				<label><strong>Status:</strong></label> {{currentTutorial.published ? "Published" : "Pending"}}
+			</div>
+			<a class="btn btn-sm btn-warning" routerLink="/tutorials/{{currentTutorial.id}}">Edit</a>
+		</div>
+		<div *ngIf="!currentTutorial">
+			<br />
+			<p>Please click on a Tutorial List</p>
+		</div>
+	</div>
+</div>

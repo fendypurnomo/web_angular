@@ -1,0 +1,21 @@
+.container-photo-profile img {
+	transition: 0.5s ease;
+}
+.choose-img {
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	width: calc(100% - 0.5rem);
+	opacity: 0;
+	border: 1px solid;
+	border-top: 0;
+	transition: 0.5s ease;
+}
+.choose-img:hover {
+	cursor: pointer;
+}
+.container-photo-profile:hover img {
+	opacity: 0.85;
+}
+.container-photo-profile:hover .choose-img {
+	opacity: 1;
+}

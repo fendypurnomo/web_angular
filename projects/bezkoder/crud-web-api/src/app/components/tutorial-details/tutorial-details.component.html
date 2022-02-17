@@ -1,0 +1,29 @@
+<div class="edit-form" *ngIf="currentTutorial.id">
+	<h4>Tutorial</h4>
+	<form novalidate>
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input id="title" class="form-control" type="text" name="title" placeholder="Entry title" autocomplete="off" [(ngModel)]="currentTutorial.title">
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<input id="description" class="form-control" type="text" name="description" placeholder="Entry description" autocomplete="off" [(ngModel)]="currentTutorial.description">
+		</div>
+		<div class="form-group">
+			<label><strong>Status:</strong></label> {{currentTutorial.published ? "Published" : "Pending"}}
+		</div>
+	</form>
+
+	<button class="btn btn-sm btn-primary mr-2" *ngIf="currentTutorial.published" (click)="updatePublished(false)">Unpublish</button>
+	<button class="btn btn-sm btn-primary mr-2" *ngIf="!currentTutorial.published" (click)="updatePublished(true)">Publish</button>
+	<button class="btn btn-sm btn-success mr-2" type="submit" (click)="updateTutorial()">Update</button>
+	<button class="btn btn-sm btn-danger mr-2" (click)="deleteTutorial()">Delete</button>
+	<button class="btn btn-sm btn-warning" onclick="window.history.back()" *ngIf="!submitted">Cancel</button>
+	<button class="btn btn-sm btn-warning" onclick="window.history.back()" *ngIf="submitted">Back</button>
+	<p>{{message}}</p>
+</div>
+
+<div *ngIf="!currentTutorial.id">
+	<br />
+	<p>Cannot access this Tutorial...</p>
+</div>

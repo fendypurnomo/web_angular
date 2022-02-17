@@ -1,0 +1,85 @@
+<div class="signup border rounded-lg p-3 p-sm-4 mx-auto my-4">
+	<h1 class="mb-2">Daftar</h1>
+	<p class="mb-4">Masukkan data diri dan alamat e-amil Anda untuk membuat akun.</p>
+	<form id="signupForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
+		<div class="form-row mx-0">
+			<div class="form-group form-floating col-sm-6 px-0 pr-sm-1 mb-4">
+				<input id="firstname" class="form-control" type="text" autocomplete="off" placeholder="Nama Depan"
+					formControlName="firstname" [ngClass]="{'is-invalid': submitted && f.firstname.errors}" Autofocus>
+				<label for="firstname">Nama Depan <span class="text-danger">*</span></label>
+				<div class="invalid-feedback" *ngIf="submitted && f.firstname.errors">
+					<div *ngIf="f.firstname.errors.required">Masukkan nama depan Anda!</div>
+					<div *ngIf="f.firstname.errors.minlength">Nama depan minimal 2 karakter!</div>
+				</div>
+			</div>
+			<div class="form-group form-floating col-sm-6 px-0 pl-sm-1 mb-4">
+				<input id="lastname" class="form-control" type="text" autocomplete="off" placeholder="Nama Belakang"
+					formControlName="lastname" [ngClass]="{'is-invalid': submitted && f.lastname.errors}">
+				<label for="lastname"><span class="pl-sm-1">Nama Belakang </span><span class="text-danger">*</span></label>
+				<div class="invalid-feedback" *ngIf="submitted && f.lastname.errors">
+					<div *ngIf="f.lastname.errors.required">Masukkan nama belakang Anda!</div>
+					<div *ngIf="f.lastname.errors.minlength">Nama belakang minimal 2 karakter!</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-row mx-0">
+			<div class="form-group form-floating col-sm-12 px-0 mb-4">
+				<input id="email" class="form-control" type="email" autocomplete="off" placeholder="E-mail"
+					formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+				<label for="email">E-mail <span class="text-danger">*</span></label>
+				<div class="invalid-feedback" *ngIf="submitted && f.email.errors">
+					<div *ngIf="f.email.errors.required">Masukkan e-mail Anda!</div>
+					<div *ngIf="f.email.errors.email">E-mail yang Anda masukkan tidak valid!</div>
+					<div *ngIf="f.email.errors.emailAlready">Maaf, e-mail yang Anda masukkan sudah terdaftar, ganti dengan e-mail
+						yang lain!</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-row mx-0">
+			<div class="form-group mb-4">
+				<div class="custom-control custom-radio custom-control-inline">
+					<input id="genderMan" class="custom-control-input" type="radio" value="1" formControlName="gender"
+						[ngClass]="{'is-invalid': submitted && f.gender.errors}">
+					<label for="genderMan" class="custom-control-label">Laki-laki</label>
+				</div>
+				<div class="custom-control custom-radio custom-control-inline">
+					<input id="genderWoman" class="custom-control-input" type="radio" value="2" formControlName="gender"
+						[ngClass]="{'is-invalid': submitted && f.gender.errors}">
+					<label for="genderWoman" class="custom-control-label">Perempuan</label>
+				</div>
+				<div class="invalid-feedback" *ngIf="submitted && f.gender.errors"
+					[ngClass]="{'d-block': submitted && f.gender.errors}">Pilih jenis kelamin Anda!</div>
+			</div>
+		</div>
+		<div class="form-row mx-0">
+			<div class="form-group form-floating col-sm-6 px-0 pr-sm-1 mb-4">
+				<input id="password" class="form-control" type="password" autocomplete="off" placeholder="Kata Sandi"
+					formControlName="password" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+				<label for="password">Kata Sandi <span class="text-danger">*</span></label>
+				<div class="invalid-feedback" *ngIf="submitted && f.password.errors">
+					<div *ngIf="f.password.errors.required">Masukkan kata sandi Anda!</div>
+					<div *ngIf="f.password.errors.minlength">Kata sandi minimal 8 karakter</div>
+					<div *ngIf="f.password.errors.notstrength">Kata sandi minimal harus mengandung 1 karakter huruf besar, huruf
+						kecil, dan angka!</div>
+				</div>
+			</div>
+			<div class="form-group form-floating col-sm-6 px-0 pl-sm-1 mb-4">
+				<input id="confirmPassword" class="form-control" type="password" autocomplete="off"
+					placeholder="Konfirmasi Kata Sandi" formControlName="confirmPassword"
+					[ngClass]="{'is-invalid': submitted && f.confirmPassword.errors}">
+				<label for="confirmPassword"><span class="pl-sm-1">Konfirmasi Kata Sandi </span><span
+						class="text-danger">*</span></label>
+				<div class="invalid-feedback" *ngIf="submitted && f.confirmPassword.errors">
+					<div *ngIf="f.confirmPassword.errors.required">Masukkan konfirmasi kata sandi Anda!</div>
+					<div *ngIf="f.confirmPassword.errors.mismatch">Konfirmasi kata sandi tidak cocok!</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center" type="submit"
+			name="auth">
+			<span class="spinner spinner-border" *ngIf="btnLoading"></span>
+			<span *ngIf="!btnLoading">Daftar</span>
+		</button>
+	</form>
+	<p class="text-center mt-4 mb-0">Sudah punya akun? <a routerLink="/signin">Masuk</a></p>
+</div>

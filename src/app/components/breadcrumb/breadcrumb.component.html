@@ -1,0 +1,10 @@
+<breadcrumb aria-label="breadcrumb" #parent>
+	<ol class="breadcrumb bg-transparent p-0">
+		<ng-template ngFor let-route [ngForOf]="parent.breadcrumbs" *ngIf="!loading.placeholderLoading">
+			<li class="breadcrumb-item font-sm" *ngIf="!route.terminal">
+				<a class="text-decoration-none" [routerLink]="[route.url]">{{route.displayName}}</a>
+			</li>
+			<li class="breadcrumb-item font-sm active" aria-current="page" *ngIf="route.terminal">{{route.displayName}}</li>
+		</ng-template>
+	</ol>
+</breadcrumb>

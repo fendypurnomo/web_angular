@@ -1,0 +1,41 @@
+<div id="app">
+	<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top py-0">
+		<a class="navbar-brand" href="#">bezKoder</a>
+		<ul class="navbar-nav mr-auto" routerLinkActive="active">
+			<li class="nav-item">
+				<a class="nav-link" href="/home" routerLink="home" routerLinkActive="active">Home</a>
+			</li>
+			<li class="nav-item" *ngIf="showAdminBoard">
+				<a class="nav-link" href="/admin" routerLink="admin" routerLinkActive="active">Admin Board</a>
+			</li>
+			<li class="nav-item" *ngIf="showModeratorBoard">
+				<a class="nav-link" href="/mod" routerLink="mod" routerLinkActive="active">Moderator Board</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/user" *ngIf="isLoggedIn" routerLink="user" routerLinkActive="active">User</a>
+			</li>
+		</ul>
+
+		<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+			<li class="nav-item">
+				<a class="nav-link" href="/signup" routerLink="signup" routerLinkActive="active">Sign Up</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/signin" routerLink="signin" routerLinkActive="active">Sign In</a>
+			</li>
+		</ul>
+
+		<ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+			<li class="nav-item">
+				<a class="nav-link" href="/profile" routerLink="profile" routerLinkActive="active">{{username}}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href (click)="signOut()">Sign Out</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container mt-5">
+		<router-outlet></router-outlet>
+	</div>
+</div>

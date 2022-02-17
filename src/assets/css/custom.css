@@ -1,0 +1,150 @@
+/** AUTH PAGES **/
+.signin,
+.recovery-account {
+	width: 425px !important;
+}
+@media (max-width: 425px) {
+	.signin,
+	.recovery-account {
+		border: 0 !important;
+		margin: 0 !important;
+		width: 100% !important;
+	}
+}
+.signup {
+	width: 575px !important;
+}
+@media (max-width: 576px) {
+	.signup {
+		border: 0 !important;
+		margin: 0 !important;
+		width: 100% !important;
+	}
+}
+.signin,
+.signup,
+.recovery-account {
+  border-radius: .5rem !important;
+}
+.form-floating {
+  position: relative;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px);
+  padding: 1rem .75rem;
+  border-radius: .5rem;
+}
+.form-floating > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem .75rem;
+  margin: 0;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-floating > label {
+    transition: none;
+  }
+}
+.form-floating > .form-control::-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+.form-floating > .form-control::placeholder {
+  color: transparent;
+  opacity: 0;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+}
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+}
+.form-floating > .form-control:-webkit-autofill {
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+}
+.form-floating > .form-select {
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.585rem) translateX(.1rem);
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.585rem) translateX(.1rem);
+}
+.form-floating > .form-control:-webkit-autofill ~ label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.585rem) translateX(.1rem);
+}
+#eye {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 5px;
+	padding: .85rem;
+	height: 48px;
+	border-radius: 5px;
+	background-color: #fff;
+}
+#eye:hover {
+	cursor: pointer;
+}
+button[name="auth"] {
+	min-height: 50px;
+}
+
+/** ADMIN PAGES **/
+/* Navbar, Sidebar Font Color */
+#navbar #btnBar,
+#navbar #btnSearchCancel,
+#navbar .navbar-nav .nav-item .nav-link,
+#navbar .dropdown .dropdown-menu .dropdown-item i,
+#sidebar .nav-item .nav-link i {
+	color: #adb5bd !important;
+}
+#navbar .dropdown .dropdown-menu .dropdown-item.active i {
+	color: #fff !important;
+}
+#navbar .navbar-nav .nav-item.active .nav-link {
+	color: #6c757d !important;
+}
+#sidebar .nav-item .nav-link {
+	color: #343a40 !important;
+}
+#sidebar .nav-item.active .nav-link,
+#sidebar .nav-item.active .nav-link i,
+#sidebar .nav-item.active .nav-link[data-toggle="collapse"]::after {
+	color: #fff !important;
+}
+
+/* Navbar, Sidebar Font Size*/
+#navbar .dropdown .dropdown-menu .dropdown-item,
+#sidebar .nav-item .nav-link,
+#sidebar .nav-item .list-group-item {
+	font-size: 0.85rem;
+}
+#sidebar .nav-item .nav-link i {
+	font-size: 1rem !important;
+}
+
+/* Sidebar Font Weight */
+#sidebar .nav-item .nav-link {
+	font-weight: 500;
+}
+#sidebar .nav-item.active .nav-link {
+	font-weight: 600;
+}
