@@ -6,18 +6,18 @@
 
 /* Custom Bootstrap */
 .form-control.is-invalid {
-	border-color: #dc3545;
-	background-image: url();
+  border-color: #dc3545;
+  background-image: url();
 }
 
 /* Custom Placeholder Loading */
 .ph-row div {
-	background-color: #e9ecef;
-	border-radius: 10px;
+  background-color: #e9ecef;
+  border-radius: 10px;
 }
 .ph-picture {
-	background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 .ph-avatar {
-	background-color: #e9ecef;
+  background-color: #e9ecef;
 }
