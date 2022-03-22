@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from 'src/app/models';
 
-const url = `${environment.apiURL}/auth/`;
+const url = `${environment.apiURL}auth/`;
 const httpOptions = {
 	headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
@@ -25,15 +25,15 @@ export class AuthService {
 
 	recoveryAccount(data: any, step: any, token: string): Observable<any> {
 		if (step == '2') {
-			this.reqUri = 'checkOtp?step=2&token=' + token;
+			this.reqUri = '?step=2&req=checkOtp&token=' + token;
 		} else if (step == '3') {
-			this.reqUri = 'resetPassword?step=3&token=' + token;
+			this.reqUri = '?step=3&req=createNewPassword&token=' + token;
 		} else {
-			this.reqUri = 'checkEmail';
+			this.reqUri = '?step=1&req=checkEmailAddress';
 		}
 
 		return this.http.post(
-			url + 'recoveryAccount/' + this.reqUri,
+			url + 'recovery/' + this.reqUri,
 			data,
 			httpOptions
 		);

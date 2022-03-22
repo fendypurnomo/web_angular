@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://api.ci4.local/api/',
+  apiURL: 'https://api.ci4.local/',
 };
 
 /*

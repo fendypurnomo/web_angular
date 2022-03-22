@@ -38,7 +38,7 @@ export class StorageService {
 
 	get getLoggedIn(): boolean | undefined {
 		const isLoggedIn = localStorage.getItem(LOGIN_KEY);
-		return isLoggedIn == 'LOGGED_IN' ? true : false;
+		return isLoggedIn == 'true' ? true : false;
 	}
 
 	public saveSidebarToggled(sidebar: string): void {

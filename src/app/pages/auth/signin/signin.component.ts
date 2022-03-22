@@ -60,9 +60,9 @@ export class SigninComponent implements OnInit {
 			.subscribe((res: any) => {
 				if (res.success) {
 					this.storage.saveLoggedIn(res.isLoggedIn);
-					this.storage.saveToken(res.token);
+					this.storage.saveToken(res.accessToken);
 					this.storage.saveUser(res.response.data);
-					this.router.navigate(['/dashboard']);
+					this.router.navigate(['/admin']);
 				} else {
 					if (res.status === 'userNotFound') {
 						this.f[res.response.errors[0].field].setErrors({
