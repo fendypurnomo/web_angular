@@ -6,16 +6,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-chrome",
+      "name": "Launch Chrome",
       "request": "launch",
-      "name": "Open signin.component.html",
-      "file": "d:\\Documents\\Apps\\Web\\angular\\angular\\src\\app\\pages\\auth\\signin\\signin.component.html"
-    },
-    {
       "type": "pwa-chrome",
-      "request": "launch",
-      "name": "Open signin.component.ts",
-      "file": "d:\\Documents\\Apps\\Web\\angular\\angular\\src\\app\\pages\\auth\\signin\\signin.component.ts"
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
