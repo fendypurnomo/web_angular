@@ -21,24 +21,23 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     const appTitle = this.titleService.getTitle();
 
-    this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        map(() => {
-          let child = this.route.firstChild;
+    this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => {
+        let child = this.route.firstChild;
 
-          while (child?.firstChild) {
-            child = child?.firstChild;
-          }
-          if (child?.snapshot.data['title']) {
-            return child.snapshot.data['title'];
-          }
-          return appTitle;
-        })
-      )
-      .subscribe((title: string) => {
-        this.titleService.setTitle(title);
-      });
+        while (child?.firstChild) {
+          child = child?.firstChild;
+        }
+
+        if (child?.snapshot.data['title']) {
+          return child.snapshot.data['title'];
+        }
+        return appTitle;
+      })
+    ).subscribe((title: string) => {
+      this.titleService.setTitle(title);
+    });
 
     this.canonicalService.setCanonicalURL();
   }
