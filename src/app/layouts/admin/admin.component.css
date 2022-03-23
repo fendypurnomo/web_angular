@@ -1,15 +1,15 @@
 navbar + .wrapper sidebar {
-	height: calc(100vh - 50px) !important;
-	margin: 50px 0 0 0 !important;
+  height: calc(100vh - 50px) !important;
+  margin: 50px 0 0 0 !important;
 }
 navbar + .wrapper main {
-	height: calc(100vh - 50px) !important;
-	margin: 50px 0 0 0 !important;
+  height: calc(100vh - 50px) !important;
+  margin: 50px 0 0 0 !important;
 }
 main {
-	height: 100vh !important;
-	width: 100% !important;
+  height: 100vh !important;
+  width: 100% !important;
 }
 main content {
-	padding: 0.485rem 1rem !important;
+  padding: 0.485rem 1rem !important;
 }

@@ -1,93 +1,30 @@
 <div class="recovery-account border rounded-lg p-4 mx-auto my-4">
 	<h1 class="mb-2">Verifikasi Kode OTP</h1>
 	<p class="mb-4">Periksa pesan masuk e-mail Anda, buka pesan baru yang telah Kami kirimkan. Salin dan masukkan kode OTP.</p>
+
 	<form id="checkOtpForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
 		<div class="form-row">
 			<div class="form-group col-2">
-				<input
-					id="digit1"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="1"
-					maxlength="1"
-					formControlName="digit1"
-					[ngClass]="{'is-invalid': submitted && f.digit1.errors}"
-					#d1
-					(keyup)="move(d1,d2)"
-					Autofocus>
+				<input id="digit1" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="1" maxlength="1" formControlName="digit1" [ngClass]="{'is-invalid': submitted && f.digit1.errors}" #d1 (keyup)="move(d1,d2)" Autofocus>
 			</div>
 			<div class="form-group col-2">
-				<input
-					id="digit2"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="2"
-					maxlength="1"
-					formControlName="digit2"
-					[ngClass]="{'is-invalid': submitted && f.digit2.errors}"
-					#d2
-					(keyup)="move(d2,d3)">
+				<input id="digit2" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="2" maxlength="1" formControlName="digit2" [ngClass]="{'is-invalid': submitted && f.digit2.errors}" #d2 (keyup)="move(d2,d3)">
 			</div>
 			<div class="form-group col-2">
-				<input
-					id="digit3"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="3"
-					maxlength="1"
-					formControlName="digit3"
-					[ngClass]="{'is-invalid': submitted && f.digit3.errors}"
-					#d3
-					(keyup)="move(d3,d4)">
+				<input id="digit3" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="3" maxlength="1" formControlName="digit3" [ngClass]="{'is-invalid': submitted && f.digit3.errors}" #d3 (keyup)="move(d3,d4)">
 			</div>
 			<div class="form-group col-2">
-				<input
-					id="digit4"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="4"
-					maxlength="1"
-					formControlName="digit4"
-					[ngClass]="{'is-invalid': submitted && f.digit4.errors}"
-					#d4
-					(keyup)="move(d4,d5)">
+				<input id="digit4" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="4" maxlength="1" formControlName="digit4" [ngClass]="{'is-invalid': submitted && f.digit4.errors}" #d4 (keyup)="move(d4,d5)">
 			</div>
 			<div class="form-group col-2">
-				<input
-					id="digit5"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="5"
-					maxlength="1"
-					formControlName="digit5"
-					[ngClass]="{'is-invalid': submitted && f.digit5.errors}"
-					#d5
-					(keyup)="move(d5,d6)">
+				<input id="digit5" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="5" maxlength="1" formControlName="digit5" [ngClass]="{'is-invalid': submitted && f.digit5.errors}" #d5 (keyup)="move(d5,d6)">
 			</div>
 			<div class="form-group col-2">
-				<input
-					id="digit6"
-					class="form-control form-control-lg"
-					type="text"
-					autocomplete="off"
-					placeholder="6"
-					maxlength="1"
-					formControlName="digit6"
-					[ngClass]="{'is-invalid': submitted && f.digit6.errors}"
-					#d6
-					(keyup)="btnCheckOtp.click()">
+				<input id="digit6" class="form-control form-control-lg" type="text" autocomplete="off" placeholder="6" maxlength="1" formControlName="digit6" [ngClass]="{'is-invalid': submitted && f.digit6.errors}" #d6 (keyup)="btnCheckOtp.click()">
 			</div>
 		</div>
-		<button
-			class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center"
-			type="submit"
-			name="auth"
-			#btnCheckOtp>
+
+		<button class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center" type="submit" name="auth" #btnCheckOtp>
 			<span class="spinner-border" *ngIf="btnLoading"></span>
 			<span *ngIf="!btnLoading">Verifikasi</span>
 		</button>

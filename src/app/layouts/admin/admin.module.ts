@@ -120,19 +120,19 @@ import {
 	XmlSchemaComponent,
 	XsltComponent,
 	XpathComponent,
-	XqueryComponent,
+	XqueryComponent
 } from 'src/app/pages/admin';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		FormsModule,
-		ReactiveFormsModule,
-		RouterModule.forChild(AdminRoutes),
-		BreadcrumbModule,
-		DirectivesModule,
-	],
-	declarations: [
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(AdminRoutes),
+    BreadcrumbModule,
+    DirectivesModule
+  ],
+  declarations: [
 		BreadcrumbsComponent,
 		PaginationComponent,
 		HomeComponent,
@@ -236,7 +236,8 @@ import {
 		XmlSchemaComponent,
 		XsltComponent,
 		XpathComponent,
-		XqueryComponent,
-	],
+		XqueryComponent
+  ]
 })
+
 export class AdminLayoutModule {}

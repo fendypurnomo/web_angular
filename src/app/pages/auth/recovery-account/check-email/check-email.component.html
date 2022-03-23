@@ -1,31 +1,22 @@
 <div class="recovery-account border rounded-lg p-4 mx-auto my-4">
-	<h1 class="mb-2">Lupa Sandi?</h1>
-	<p class="mb-4">Masukkan alamat e-mail Anda dan Kami akan mengirimkan tautan untuk menyetel ulang kata sandi Anda.</p>
-	<form id="checkEmailForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
-		<div class="form-group form-floating">
-			<input
-				id="email"
-				class="form-control"
-				type="text"
-				autocomplete="off"
-				placeholder="E-mail"
-				formControlName="email"
-				[ngClass]="{'is-invalid': submitted && f.email.errors}"
-				Autofocus>
-			<label for="email">Email</label>
-			<div class="invalid-feedback" *ngIf="submitted && f.email.errors">
-				<div *ngIf="f.email.errors.required">Masukkan alamat e-mail Anda!</div>
-				<div *ngIf="f.email.errors.email">E-mail yang Anda masukkan tidak valid!</div>
-				<div *ngIf="f.email.errors.notfound">E-mail yang Anda masukkan tidak dapat kami temukan!</div>
-			</div>
-		</div>
-		<button
-			class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center"
-			type="submit"
-			name="auth">
-			<span class="spinner-border" *ngIf="btnLoading"></span>
-			<span *ngIf="!btnLoading">Kirim</span>
-		</button>
-	</form>
-	<p class="text-center mt-4 mb-0">Sudah punya akun? <a routerLink="/signin">Masuk</a></p>
+  <h1 class="mb-2">Lupa Sandi?</h1>
+  <p class="mb-4">Masukkan alamat e-mail Anda dan Kami akan mengirimkan tautan untuk menyetel ulang kata sandi Anda.</p>
+
+  <form id="checkEmailForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
+    <div class="form-group form-floating">
+      <input id="email" class="form-control" type="text" autocomplete="off" placeholder="E-mail" formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" Autofocus>
+      <label for="email">Email</label>
+      <div class="invalid-feedback" *ngIf="submitted && f.email.errors">
+        <div *ngIf="f.email.errors.required">Masukkan alamat e-mail Anda!</div>
+        <div *ngIf="f.email.errors.email">E-mail yang Anda masukkan tidak valid!</div>
+        <div *ngIf="f.email.errors.notfound">E-mail yang Anda masukkan tidak dapat kami temukan!</div>
+      </div>
+    </div>
+
+    <button class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center" type="submit" name="auth">
+      <span class="spinner-border" *ngIf="btnLoading"></span>
+      <span *ngIf="!btnLoading">Kirim</span>
+    </button>
+  </form>
+  <p class="text-center mt-4 mb-0">Sudah punya akun? <a routerLink="/signin">Masuk</a></p>
 </div>
