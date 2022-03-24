@@ -53,18 +53,19 @@ export class SigninComponent implements OnInit {
 
     this.authService.signin(this.form.value).subscribe((res: any) => {
       if (!res.success) {
+        const field = Object.keys(res.messages);
+
         if (res.error === 'accountNotFound') {
-          this.f.username.setErrors({ accountNotFound: true });
+          this.f[field[0]].setErrors({ accountNotFound: true });
         } else if (res.error === 'accountHasNotBeenActivated') {
-          this.f.username.setErrors({ accountHasNotBeenActivated: true });
+          this.f[field[0]].setErrors({ accountHasNotBeenActivated: true });
         } else if (res.error === 'accountBlocked') {
-          this.f.username.setErrors({ accountBlocked: true });
+          this.f[field[0]].setErrors({ accountBlocked: true });
         } else {
-          this.f.password.setErrors({ invalidPassword: true });
+          this.f[field[0]].setErrors({ invalidPassword: true });
         }
 
-        this.el.nativeElement.querySelector('#username').focus();
-
+        this.el.nativeElement.querySelector('#' + field[0]).focus();
         return;
       }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services';
@@ -14,6 +14,7 @@ export class CheckEmailComponent implements OnInit {
   submitted = false;
 
   constructor(
+    private el: ElementRef,
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
@@ -26,27 +27,31 @@ export class CheckEmailComponent implements OnInit {
     })
   }
 
-  get f() {
-    return this.form.controls;
-  }
-
   onSubmit() {
     this.submitted = true;
 
-    if (this.form.invalid) { return; }
+    if (this.form.invalid) {
+      this.btnLoading = false;
+      return;
+    }
 
     this.btnLoading = true;
 
     this.authService.recoveryAccount(this.form.value, '1', '').subscribe((res: any) => {
       if (!res.success) {
         this.f['email'].setErrors({ notfound: true });
+        this.el.nativeElement.querySelector('#email').focus();
         return;
       }
 
       this.router.navigate(['./checkOtp'], {
-        queryParams: { token: res.token },
+        queryParams: { step: 2, token: res.accessToken },
         relativeTo: this.route
       });
     }).add(() => (this.btnLoading = false));
+  }
+
+  get f() {
+    return this.form.controls;
   }
 }

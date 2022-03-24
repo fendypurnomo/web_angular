@@ -4,8 +4,9 @@ import { AutofocusDirective } from './autofocus.directive';
 import { AutofocusInvalidDirective } from './autofocus-invalid.directive';
 
 @NgModule({
-	imports: [CommonModule],
-	declarations: [AutofocusDirective, AutofocusInvalidDirective],
-	exports: [AutofocusDirective, AutofocusInvalidDirective]
+  imports: [CommonModule],
+  declarations: [AutofocusDirective, AutofocusInvalidDirective],
+  exports: [AutofocusDirective, AutofocusInvalidDirective]
 })
+
 export class DirectivesModule {}

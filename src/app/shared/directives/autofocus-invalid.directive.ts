@@ -1,6 +1,7 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({ selector: '[AutofocusInvalid]' })
+
 export class AutofocusInvalidDirective {
   constructor(private el: ElementRef) {}
 
@@ -10,9 +11,7 @@ export class AutofocusInvalidDirective {
     const invalidControl = this.el.nativeElement.querySelector('.ng-invalid');
 
     if (invalidControl) {
-      setTimeout(() => {
-        invalidControl.focus();
-      }, 250);
+      setTimeout(() => { invalidControl.focus(); }, 250);
     }
   }
 }

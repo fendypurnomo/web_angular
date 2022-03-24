@@ -33,6 +33,6 @@ export class AuthService {
 			this.reqUri = '?step=1&req=checkEmailAddress';
 		}
 
-		return this.http.post(url + 'recovery/' + this.reqUri, data, httpOptions);
+		return this.http.post(url + 'recovery' + this.reqUri, data, httpOptions);
 	}
 }
