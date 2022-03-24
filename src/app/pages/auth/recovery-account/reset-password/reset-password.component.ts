@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/shared/services';
@@ -13,9 +13,12 @@ export class ResetPasswordComponent implements OnInit {
   form!: FormGroup;
   btnLoading = false;
   submitted = false;
+  inputType = 'password';
+  showHideClass = 'fa-eye';
   token!: string;
 
   constructor(
+    private el: ElementRef,
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
@@ -35,6 +38,20 @@ export class ResetPasswordComponent implements OnInit {
     });
 
     this.route.queryParams.subscribe((params) => (this.token = params.token));
+  }
+
+  showHide() {
+    if (this.form.get('newPassword') !== null) {
+      this.el.nativeElement.querySelector('#newPassword').focus();
+
+      if (this.inputType == 'password') {
+        this.inputType = 'text';
+        this.showHideClass = 'fa-eye-slash';
+      } else {
+        this.inputType = 'password';
+        this.showHideClass = 'fa-eye';
+      }
+    }
   }
 
   onSubmit() {
