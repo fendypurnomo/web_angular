@@ -7,9 +7,9 @@
       <label for="username">Email atau Nama Pengguna</label>
       <div class="invalid-feedback" *ngIf="submitted && f.username.errors">
         <span *ngIf="f.username.errors.required">Masukkan email atau nama pengguna Anda!</span>
-        <span *ngIf="f.username.errors.userNotFound">Akun Anda tidak dapat kami temukan, periksa kembali email atau nama pengguna Anda!</span>
-        <span *ngIf="f.username.errors.accountUnactivated">Maaf, Anda belum melakukan aktivasi akun!</span>
-        <span *ngIf="f.username.errors.userBlocked">Maaf, akun Anda diblokir!</span>
+        <span *ngIf="f.username.errors.accountNotFound">Akun Anda tidak dapat kami temukan, periksa kembali email atau nama pengguna Anda!</span>
+        <span *ngIf="f.username.errors.accountHasNotBeenActivated">Maaf, Anda belum melakukan aktivasi akun!</span>
+        <span *ngIf="f.username.errors.accountBlocked">Maaf, akun Anda diblokir!</span>
       </div>
     </div>
 

@@ -30,13 +30,10 @@ export class SigninComponent implements OnInit {
     });
   }
 
-  get f() {
-    return this.form.controls;
-  }
-
   showHide() {
     if (this.form.get('password') !== null) {
       this.el.nativeElement.querySelector('#password').focus();
+
       if (this.inputType == 'password') {
         this.inputType = 'text';
         this.showHideClass = 'fa-eye-slash';
@@ -55,24 +52,30 @@ export class SigninComponent implements OnInit {
     this.btnLoading = true;
 
     this.authService.signin(this.form.value).subscribe((res: any) => {
-      if (res.success) {
-        this.storage.saveLoggedIn(res.isLoggedIn);
-        this.storage.saveToken(res.accessToken);
-        this.storage.saveUser(res.response.data);
-        this.router.navigate(['/admin']);
-      } else {
-        if (res.status === 'userNotFound') {
-          this.f[res.response.errors[0].field].setErrors({ userNotFound: true });
-        } else if (res.status === 'accountUnactivated') {
-          this.f[res.response.errors[0].field].setErrors({ accountUnactivated: true });
-        } else if (res.status === 'userBlocked') {
-          this.f[res.response.errors[0].field].setErrors({ userBlocked: true });
+      if (!res.success) {
+        if (res.error === 'accountNotFound') {
+          this.f.username.setErrors({ accountNotFound: true });
+        } else if (res.error === 'accountHasNotBeenActivated') {
+          this.f.username.setErrors({ accountHasNotBeenActivated: true });
+        } else if (res.error === 'accountBlocked') {
+          this.f.username.setErrors({ accountBlocked: true });
         } else {
-          this.f[res.response.errors[0].field].setErrors({ invalidPassword: true });
+          this.f.password.setErrors({ invalidPassword: true });
         }
-        this.el.nativeElement.querySelector('#' + res.response.errors[0].field).focus();
+
+        this.el.nativeElement.querySelector('#username').focus();
+
         return;
       }
+
+      this.storage.saveLoggedIn(res.isLoggedIn);
+      this.storage.saveToken(res.accessToken);
+      this.storage.saveUser(res.response.data);
+      this.router.navigate(['/dashboard']);
     }).add(() => (this.btnLoading = false));
+  }
+
+  get f() {
+    return this.form.controls;
   }
 }
