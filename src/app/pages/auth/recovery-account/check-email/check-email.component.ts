@@ -22,9 +22,7 @@ export class CheckEmailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.form = this.fb.group({
-      email: ['', [Validators.required, Validators.email]]
-    })
+    this.form = this.fb.group({ email: ['', [Validators.required, Validators.email]] })
   }
 
   onSubmit() {
@@ -45,8 +43,7 @@ export class CheckEmailComponent implements OnInit {
       }
 
       this.router.navigate(['./checkOtp'], {
-        queryParams: { step: 2, token: res.accessToken },
-        relativeTo: this.route
+        queryParams: { step: 2, req: 'checkOTPCode', token: res.accessToken }, relativeTo: this.route
       });
     }).add(() => (this.btnLoading = false));
   }

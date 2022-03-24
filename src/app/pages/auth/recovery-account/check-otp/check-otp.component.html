@@ -4,12 +4,12 @@
 
 	<form id="checkOtpForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
 		<div class="form-group form-floating">
-			<input id="codeOTP" class="form-control form-control-lg" type="number" autocomplete="off" placeholder="Masukkan Kode OTP Anda" maxlength="6" formControlName="codeOTP" [ngClass]="{'is-invalid': submitted && f.codeOTP.errors}">
+			<input id="otp" class="form-control form-control-lg" type="number" autocomplete="off" placeholder="Masukkan Kode OTP Anda" maxlength="6" formControlName="otp" [ngClass]="{'is-invalid': submitted && f.otp.errors}" Autofocus>
 			<label for="email">Kode OTP</label>
-			<div class="invalid-feedback" *ngIf="submitted && f.codeOTP.errors">
-				<div *ngIf="f.codeOTP.errors.required">Masukkan Kode OTP Anda!</div>
-				<div *ngIf="f.codeOTP.errors.invalidOTPCode">Kode OTP yang Anda masukkan tidak valid!</div>
-				<div *ngIf="f.codeOTP.errors.failed">Terjadi kesalahan. Permintaan Anda tidak dapat diproses!</div>
+			<div class="invalid-feedback" *ngIf="submitted && f.otp.errors">
+				<div *ngIf="f.otp.errors.required">Masukkan Kode OTP Anda!</div>
+				<div *ngIf="f.otp.errors.invalidOTPCode">Kode OTP yang Anda masukkan tidak valid!</div>
+				<div *ngIf="f.otp.errors.failed">Terjadi kesalahan. Permintaan Anda tidak dapat diproses!</div>
 			</div>
 		</div>
 

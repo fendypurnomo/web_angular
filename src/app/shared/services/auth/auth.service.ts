@@ -26,7 +26,7 @@ export class AuthService {
 
 	recoveryAccount(data: any, step: any, token: string): Observable<any> {
 		if (step == '2') {
-			this.reqUri = '?step=2&req=checkOtp&token=' + token;
+			this.reqUri = '?step=2&req=checkOTPCode&token=' + token;
 		} else if (step == '3') {
 			this.reqUri = '?step=3&req=createNewPassword&token=' + token;
 		} else {

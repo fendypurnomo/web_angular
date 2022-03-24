@@ -23,10 +23,7 @@ export class CheckOtpComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.form = this.fb.group({
-      codeOTP: ['', Validators.required]
-    });
-
+    this.form = this.fb.group({ otp: ['', Validators.required] });
     this.route.queryParams.subscribe((params) => (this.token = params.token));
   }
 
@@ -43,17 +40,17 @@ export class CheckOtpComponent implements OnInit {
     this.authService.recoveryAccount(this.form.value, '2', this.token).subscribe((res) => {
       if (!res.success) {
         if (res.error == 'invalidOTPCode'){
-          this.f['codeOTP'].setErrors({ invalidOTPCode: true })
+          this.f['otp'].setErrors({ invalidOTPCode: true })
         } else {
-          this.f['codeOTP'].setErrors({ failed: true })
+          this.f['otp'].setErrors({ failed: true })
         }
 
-        this.el.nativeElement.querySelector('#codeOTP').focus();
+        this.el.nativeElement.querySelector('#otp').focus();
         return;
       }
  
       this.router.navigate(['../resetPassword'], {
-        queryParams: { step: 3, token: res.accessToken },
+        queryParams: { step: 3, req: 'createNewPassword', token: res.accessToken },
         relativeTo: this.route
       })
     }).add(() => (this.btnLoading = false));
