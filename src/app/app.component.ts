@@ -6,10 +6,8 @@ import { NavigationEnd, Router, ActivatedRoute } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { CanonicalService } from 'src/app/shared/services';
 
-@Component({
-  selector: 'root',
-  templateUrl: './app.component.html',
-})
+@Component({ selector: 'root', templateUrl: './app.component.html' })
+
 export class AppComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
@@ -26,18 +24,13 @@ export class AppComponent implements OnInit {
       map(() => {
         let child = this.route.firstChild;
 
-        while (child?.firstChild) {
-          child = child?.firstChild;
-        }
+        while (child?.firstChild) { child = child?.firstChild; }
 
-        if (child?.snapshot.data['title']) {
-          return child.snapshot.data['title'];
-        }
+        if (child?.snapshot.data['title']) { return child.snapshot.data['title']; }
+
         return appTitle;
       })
-    ).subscribe((title: string) => {
-      this.titleService.setTitle(title);
-    });
+    ).subscribe((title: string) => { this.titleService.setTitle(title); });
 
     this.canonicalService.setCanonicalURL();
   }

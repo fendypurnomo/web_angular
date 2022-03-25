@@ -1,4 +1,1 @@
-export const environment = {
-  production: true,
-  apiURL: 'https://api.ci4.local/'
-};
+export const environment = { production: true, apiURL: 'https://api.ci4.local/' };

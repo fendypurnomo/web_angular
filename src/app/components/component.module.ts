@@ -11,25 +11,9 @@ import { ToastComponent } from './toast/toast.component';
 import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    NgbModule
-  ],
-  declarations: [
-    NavbarComponent,
-    SidebarComponent,
-    FooterComponent,
-    ToastComponent,
-    AlertComponent
-  ],
-  exports: [
-    NavbarComponent,
-    SidebarComponent,
-    FooterComponent,
-    ToastComponent,
-    AlertComponent
-  ]
+  imports: [ CommonModule, RouterModule, NgbModule ],
+  declarations: [ NavbarComponent, SidebarComponent, FooterComponent, ToastComponent, AlertComponent ],
+  exports: [ NavbarComponent, SidebarComponent, FooterComponent, ToastComponent, AlertComponent ]
 })
 
 export class ComponentModule {}

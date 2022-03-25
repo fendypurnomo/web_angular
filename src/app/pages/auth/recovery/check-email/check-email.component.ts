@@ -3,10 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services';
 
-@Component({
-  selector: 'recovery-account',
-  templateUrl: './check-email.component.html',
-})
+@Component({ selector: 'recovery-account', templateUrl: './check-email.component.html' })
 
 export class CheckEmailComponent implements OnInit {
   form!: FormGroup;

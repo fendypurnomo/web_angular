@@ -3,10 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services';
 
-@Component({
-  selector: 'recovery-account',
-  templateUrl: './check-otp.component.html',
-})
+@Component({ selector: 'recovery-account', templateUrl: './check-otp.component.html' })
 
 export class CheckOtpComponent implements OnInit {
   form!: FormGroup;

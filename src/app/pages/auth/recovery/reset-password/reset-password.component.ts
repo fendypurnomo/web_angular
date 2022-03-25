@@ -4,10 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/shared/services';
 import { CustomValidator } from 'src/app/shared/helpers';
 
-@Component({
-  selector: 'recovery-account',
-  templateUrl: './reset-password.component.html',
-})
+@Component({ selector: 'recovery-account', templateUrl: './reset-password.component.html' })
 
 export class ResetPasswordComponent implements OnInit {
   form!: FormGroup;
@@ -30,7 +27,8 @@ export class ResetPasswordComponent implements OnInit {
     this.form = this.fb.group({
       newPassword: ['', [Validators.required, Validators.minLength(8)]],
       confirmNewPassword: ['', Validators.required]
-    }, {
+    },
+    {
       validator: [
         this.customValidator.MatchPassword('newPassword', 'confirmNewPassword'),
         this.customValidator.createPasswordStrength('newPassword')
@@ -65,9 +63,7 @@ export class ResetPasswordComponent implements OnInit {
     this.btnLoading = true;
 
     this.authService.recoveryAccount(this.form.value, '3', this.token).subscribe((res: any) => {
-      if (!res.success) {
-        return;
-      }
+      if (!res.success) { return; }
 
       this.router.navigate(['/signin'], { relativeTo: this.route });
     }).add(() => (this.btnLoading = false));

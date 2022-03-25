@@ -1,7 +1,6 @@
 <div class="recovery-account border rounded-lg p-4 mx-auto my-4">
 	<h1 class="mb-2">Verifikasi Kode OTP</h1>
 	<p class="mb-4">Periksa pesan masuk e-mail Anda, buka pesan baru yang telah Kami kirimkan. Salin dan masukkan kode OTP.</p>
-
 	<form id="checkOtpForm" accept-charset="utf-8" novalidate [formGroup]="form" (ngSubmit)="onSubmit()" AutofocusInvalid>
 		<div class="form-group form-floating">
 			<input id="otp" class="form-control form-control-lg" type="number" autocomplete="off" placeholder="Masukkan Kode OTP Anda" maxlength="6" formControlName="otp" [ngClass]="{'is-invalid': submitted && f.otp.errors}" Autofocus>
@@ -12,7 +11,6 @@
 				<div *ngIf="f.otp.errors.failed">Terjadi kesalahan. Permintaan Anda tidak dapat diproses!</div>
 			</div>
 		</div>
-
 		<button class="btn btn-lg btn-block btn-primary rounded-pill d-flex justify-content-center" type="submit" name="auth">
 			<span class="spinner-border" *ngIf="btnLoading"></span>
 			<span *ngIf="!btnLoading">Verifikasi</span>

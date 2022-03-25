@@ -1,11 +1,9 @@
 /** AUTH PAGES **/
-.signin,
-.recovery-account {
+.signin, .recovery-account {
   width: 425px !important;
 }
 @media (max-width: 425px) {
-  .signin,
-  .recovery-account {
+  .signin, .recovery-account {
     border: 0 !important;
     margin: 0 !important;
     width: 100% !important;
@@ -21,16 +19,13 @@
     width: 100% !important;
   }
 }
-.signin,
-.signup,
-.recovery-account {
+.signin, .signup, .recovery-account {
   border-radius: .5rem !important;
 }
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control,
-.form-floating > .form-select {
+.form-floating > .form-control, .form-floating > .form-select {
   height: calc(3.5rem + 2px);
   padding: 1rem .75rem;
   border-radius: .5rem;
@@ -109,11 +104,7 @@ button[name="auth"] {
 
 /** ADMIN PAGES **/
 /* Navbar, Sidebar Font Color */
-#navbar #btnBar,
-#navbar #btnSearchCancel,
-#navbar .navbar-nav .nav-item .nav-link,
-#navbar .dropdown .dropdown-menu .dropdown-item i,
-#sidebar .nav-item .nav-link i {
+#navbar #btnBar, #navbar #btnSearchCancel, #navbar .navbar-nav .nav-item .nav-link, #navbar .dropdown .dropdown-menu .dropdown-item i, #sidebar .nav-item .nav-link i {
   color: #adb5bd !important;
 }
 #navbar .dropdown .dropdown-menu .dropdown-item.active i {
@@ -125,16 +116,12 @@ button[name="auth"] {
 #sidebar .nav-item .nav-link {
   color: #343a40 !important;
 }
-#sidebar .nav-item.active .nav-link,
-#sidebar .nav-item.active .nav-link i,
-#sidebar .nav-item.active .nav-link[data-toggle="collapse"]::after {
+#sidebar .nav-item.active .nav-link, #sidebar .nav-item.active .nav-link i, #sidebar .nav-item.active .nav-link[data-toggle="collapse"]::after {
   color: #fff !important;
 }
 
 /* Navbar, Sidebar Font Size*/
-#navbar .dropdown .dropdown-menu .dropdown-item,
-#sidebar .nav-item .nav-link,
-#sidebar .nav-item .list-group-item {
+#navbar .dropdown .dropdown-menu .dropdown-item, #sidebar .nav-item .nav-link, #sidebar .nav-item .list-group-item {
   font-size: 0.85rem;
 }
 #sidebar .nav-item .nav-link i {

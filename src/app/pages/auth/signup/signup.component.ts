@@ -4,10 +4,7 @@ import { Router } from '@angular/router';
 import { CustomValidator } from 'src/app/shared/helpers';
 import { AuthService } from 'src/app/shared/services';
 
-@Component({
-  selector: 'signup',
-  templateUrl: './signup.component.html',
-})
+@Component({ selector: 'signup', templateUrl: './signup.component.html' })
 
 export class SignupComponent implements OnInit {
   form!: FormGroup;
@@ -41,14 +38,13 @@ export class SignupComponent implements OnInit {
     )
   }
 
-  get f() {
-    return this.form.controls;
-  }
-
   onSubmit() {
     this.submitted = true;
 
-    if (this.form.invalid) { return; }
+    if (this.form.invalid) {
+      this.btnLoading = false;
+      return;
+    }
 
     this.btnLoading = true;
 
@@ -60,5 +56,9 @@ export class SignupComponent implements OnInit {
       }
       this.router.navigate(['/signin']);
     }).add(() => (this.btnLoading = false));
+  }
+
+  get f() {
+    return this.form.controls;
   }
 }

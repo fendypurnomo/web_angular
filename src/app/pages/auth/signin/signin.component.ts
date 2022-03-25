@@ -3,10 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StorageService, AuthService } from 'src/app/shared/services';
 
-@Component({
-  selector: 'signin',
-  templateUrl: './signin.component.html',
-})
+@Component({ selector: 'signin', templateUrl: './signin.component.html' })
 
 export class SigninComponent implements OnInit {
   form!: FormGroup;
