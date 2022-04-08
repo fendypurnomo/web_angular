@@ -178,17 +178,6 @@
             "scripts": []
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -292,17 +281,6 @@
             "styles": ["projects/bezkoder/crud-web-api/src/styles.css"],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/bezkoder/crud-web-api/tsconfig.app.json",
-              "projects/bezkoder/crud-web-api/tsconfig.spec.json",
-              "projects/bezkoder/crud-web-api/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -394,17 +372,6 @@
             "styles": ["projects/bezkoder/jwt-auth-web-api/src/styles.css"],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/bezkoder/jwt-auth-web-api/tsconfig.app.json",
-              "projects/bezkoder/jwt-auth-web-api/tsconfig.spec.json",
-              "projects/bezkoder/jwt-auth-web-api/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -495,17 +462,6 @@
             ],
             "styles": ["projects/bezkoder/multiple-file-upload/src/styles.css"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/bezkoder/multiple-file-upload/tsconfig.app.json",
-              "projects/bezkoder/multiple-file-upload/tsconfig.spec.json",
-              "projects/bezkoder/multiple-file-upload/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -599,17 +555,6 @@
             "styles": ["projects/directive-autofocus/src/styles.css"],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/directive-autofocus/tsconfig.app.json",
-              "projects/directive-autofocus/tsconfig.spec.json",
-              "projects/directive-autofocus/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -702,17 +647,6 @@
             "styles": ["projects/emilol/angular-crumbs/src/styles.css"],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/emilol/angular-crumbs/tsconfig.app.json",
-              "projects/emilol/angular-crumbs/tsconfig.spec.json",
-              "projects/emilol/angular-crumbs/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -801,17 +735,6 @@
             "assets": ["src/favicon.ico", "projects/positronx/src/assets"],
             "styles": ["projects/positronx/src/styles.css"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/positronx/tsconfig.app.json",
-              "projects/positronx/tsconfig.spec.json",
-              "projects/positronx/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -908,17 +831,6 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/positronx/crud-with-nodejs-and-express/tsconfig.app.json",
-              "projects/positronx/crud-with-nodejs-and-express/tsconfig.spec.json",
-              "projects/positronx/crud-with-nodejs-and-express/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -1009,17 +921,6 @@
             ],
             "styles": ["projects/positronx/jwt-auth/src/styles.css"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/positronx/jwt-auth/tsconfig.app.json",
-              "projects/positronx/jwt-auth/tsconfig.spec.json",
-              "projects/positronx/jwt-auth/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -1116,17 +1017,6 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/positronx/seo-set-dynamic-page-title-meta-tags/tsconfig.app.json",
-              "projects/positronx/seo-set-dynamic-page-title-meta-tags/tsconfig.spec.json",
-              "projects/positronx/seo-set-dynamic-page-title-meta-tags/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -1218,17 +1108,6 @@
             ],
             "styles": ["projects/watmore/crud-reactive-forms/src/styles.css"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/watmore/crud-reactive-forms/tsconfig.app.json",
-              "projects/watmore/crud-reactive-forms/tsconfig.spec.json",
-              "projects/watmore/crud-reactive-forms/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         }
       }
